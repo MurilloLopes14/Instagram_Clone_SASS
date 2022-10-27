@@ -1,0 +1,24 @@
+@use "../1-BASE/_variables"
+
+#main_container
+    display: flex
+    margin-top: 30px
+    @include mobile()
+        margin-top: 0
+
+    #register_container
+        background-color: variables.$light-color
+        border: 1px solid variables.$border-color
+        width: 350px
+        margin-top: 10px
+        padding: 25px
+        @include mobile()
+            border: none
+            width: 100%
+
+    #get_app_container
+        text-align: center
+        width: 350px
+        @include mobile()
+            border: none
+            width: 100%

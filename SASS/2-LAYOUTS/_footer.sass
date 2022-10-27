@@ -1,0 +1,30 @@
+@use "../1-BASE/_variables"
+
+footer
+    text-align: left
+    width: 1000px
+    margin: 50px auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    @include mobile()
+        width: 90%
+
+    #footer_links
+        display: flex
+        @include mobile()
+            flex-wrap: wrap
+            justify-content: center
+            margin-bottom: 10px
+
+        li
+            margin-right: 10px
+
+    a, #copyright
+        text-decoration: none
+        color: variables.$links-footer-color
+        font-size: 12px
+
+    #copyright
+        margin-top: 10px

@@ -1,0 +1,15 @@
+@use "variables"
+@import "baseMixins"
+
+@include reset
+
+body
+    background-color: $bg-color
+    @include mobile()
+        background-color: variables.$light-color
+
+a
+    text-decoration: none
+
+ul
+    list-style: none

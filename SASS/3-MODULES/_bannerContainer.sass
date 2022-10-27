@@ -1,0 +1,97 @@
+@use "../1-BASE/_variables"
+@use "../1-BASE/_baseMixins"
+
+#banner_container, #form_container
+    flex: 1 1 0
+    width: 50%
+
+#banner_container
+    text-align: right
+    @include mobile()
+        display: none
+
+    img
+        width: 100%
+        margin: 25px 15px 0 0
+        max-width: 380px
+
+#form_container
+    text-align: center
+    @include mobile()
+        border: none
+        width: 100%
+
+    #form_box
+        background-color: variables.$light-color
+        border: 1px solid variables.$border-color
+        width: 350px
+        margin-top: 30px
+        @include mobile()
+            margin-top: 0
+            border: none
+            width: 100%
+
+        #instagram
+            width: 175px
+            height: 51px
+            margin: 30px auto 12px
+
+        #login_form
+            margin-top: 20px
+
+            input
+                display: block
+                font-size: 12px
+                border: 1px solid variables.$border-color
+                border-radius: 3px
+                width: 268px
+                margin: 5px auto
+
+            input[type="text"], input[type="password"]
+                background-color: variables.$bg-color
+                padding: 12px 9px
+
+        .separator
+            position: relative
+
+            .line
+                border-top: 1px solid variables.$border-color
+                width: 268px
+                margin: 25px auto 35px
+
+            span
+                position: absolute
+                text-transform: uppercase
+                color: #bbb
+                background-color: variables.$light-color
+                top: -6px
+                width: 50px
+                margin-left: -25px
+                font-size: 14px
+
+        #other_links
+            #facebook_login
+                margin-bottom: 25px
+
+                a
+                    color: variables.$login-facebook-link-color
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                img
+                    width: 16px
+                    height: 16px
+                    margin-right: 18px
+
+                span
+                    font-weight: bold
+                    font-size: 13px
+                    margin-top: 1px
+
+            #forgot_pass
+                margin-bottom: 20px
+                font-size: 12px
+
+                a
+                    color: variables.$click-in-link-color
